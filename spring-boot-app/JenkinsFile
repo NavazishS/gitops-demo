@@ -8,7 +8,7 @@ pipeline {
       args '-v $HOME/.m2:/root/.m2'
     }
   }
-  // stages {
+  stages {
   //  stage('Checkout') {
   //    steps {
   //      sh 'This step is needed only when your jenkins file is not placed in your GitRepo i.e either using webhook or Script configured using Jenkins console. But in our case we are placing jenkins file in Git repo. Hence, we are echo passeing this step without any actions'
