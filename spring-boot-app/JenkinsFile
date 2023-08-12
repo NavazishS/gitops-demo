@@ -3,8 +3,9 @@ pipeline {
     docker {
       // registryUrl 'https://docker.io'
       // registryCredentialsId 'dockerhub-cred'
-      image 'nawdocker/maven-agent:v1'
-      args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      image 'maven:3-jdk-8'
+      // args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      args '-v $HOME/.m2:/root/.m2'
     }
   }
   stages {
