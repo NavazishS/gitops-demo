@@ -41,7 +41,7 @@ pipeline {
       steps {
         script {
             sh 'step-0'
-            sh 'cd spring-boot-app && docker build --progress=plain --no-cache -t ${DOCKER_IMAGE} .'
+            sh 'cd spring-boot-app && docker build -v -t ${DOCKER_IMAGE} .'
             sh 'step-1'
             def dockerImage = docker.image("${DOCKER_IMAGE}")
             sh 'step-2'
