@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: nawdocker/nawazrepo1:53
+        image: nawdocker/nawazrepo1:54
         ports:
         - containerPort: 8080
